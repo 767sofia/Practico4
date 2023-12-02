@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=M+PLUS+Rounded+1c:wght@400;500&family=Raleway:wght@300;400;500&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body{
+    background-color: hsla(283, 92%, 10%, 0.927);
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: hsl(283, 93%, 88%);
+    color: rgb(0, 0, 0);
+    border-radius: 0.5em;
+    font-weight: 400;
+}
+
+.search-container{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+    width: 100%;
+    min-width: 50em;
+    margin: 1em auto;
+    padding: 0.5em;
+}
+
+    .search-container input{
+        padding: 1em;
+        border-radius: 0.5em;
+        font-weight: 400;
+    }
+
+    .wrapper{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .loading{
+        display: none;
+        height: 15em;
+        width: 15em;
+        border: 3em solid #2a1f1f;
+        border-radius: 50%;
+        border-top-color: #ba4dec;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        animation: spin 3s infinite;
+    }
+
+    .container{
+        background-color: #fff;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 10px;
+    }
+
+@keyframes spin{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
